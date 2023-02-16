@@ -1,0 +1,16 @@
+Write shell script to calculate sizes of each those file
+
+
+#!/bin/bash
+
+# enter the directory path
+read rootDir
+
+# listing the files in directory path
+files=$( find $rootDir -type f | wc -l )
+
+# listing the each file sizes
+filesize=$( du -sh * )
+
+echo "the files in the directory are $files"
+echo "the file sizes are $filesize"
