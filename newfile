@@ -1,0 +1,40 @@
+Write shell script to list all files recusively 
+Write shell script to calculate sizes of each those file
+write a command to copy from                       destination  
+Create a jenkins pipelien and compile   
+create a git repo and commit all your scripts and this task file
+
+
+
+#!/bin/bash
+
+# enter the directory path
+read rootDir
+
+# listing the files in directory path
+files=$( find $rootDir -type f | wc -l )
+
+echo "the files in the directory are $files"
+
+
+
+
+#!/bin/bash
+
+# enter the directory path
+read rootDir
+
+# listing the files in directory path
+files=$( find $rootDir -type f | wc -l )
+
+# listing the each file sizes
+filesize=$( du -sh * )
+
+echo "the files in the directory are $files"
+echo "the file sizes are $filesize"
+
+
+
+
+cp source_file_path destination_file_path 
+scp source_file_path remoteuser@remotehostname:destination_file_path
