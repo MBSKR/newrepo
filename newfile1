@@ -1,0 +1,12 @@
+Write shell script to list all files recusively
+
+
+#!/bin/bash
+
+# enter the directory path
+read rootDir
+
+# listing the files in directory path
+files=$( find $rootDir -type f | wc -l )
+
+echo "the files in the directory are $files"
